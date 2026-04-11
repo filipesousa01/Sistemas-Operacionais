@@ -55,5 +55,28 @@ Ler dezenas de processos diretamente do Sistema Operacional é uma tarefa que ex
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU-NOME-DE-USUARIO/monitor-sistema.git](https://github.com/SEU-NOME-DE-USUARIO/monitor-sistema.git)
+   git clone (https://github.com/filipesousa01/Sistemas-Operacionais.git)
    cd monitor-sistema
+
+Crie um ambiente virtual 
+
+Windows:
+python -m venv .venv
+.venv\Scripts\activate
+
+Linux/Mac:
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+📚 Tecnologias Utilizadas:
+
+Python: Linguagem base.
+
+Psutil: Biblioteca principal para extração de métricas de Hardware e SO.
+
+GPUtil: Extração de dados específicos de placas de vídeo.
+
+Flet: Framework para a interface gráfica GUI.
+
+Textual: Framework para a interface de terminal TUI.
