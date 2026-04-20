@@ -1,4 +1,4 @@
-#  Monitor de Sistema e Diagnóstico (GUI vs TUI)
+# 🖥️ Monitor de Sistema e Diagnóstico (GUI vs TUI)
 
 Um projeto desenvolvido em Python focado na coleta, análise e exibição de métricas do Sistema Operacional e Hardware em tempo real. 
 
@@ -6,8 +6,23 @@ Este repositório serve como um **Estudo de Caso Arquitetural**, apresentando a 
 
 ---
 
+## 📸 Demonstração Visual
+
+Abaixo você pode ver o contraste entre as duas abordagens utilizando os mesmos dados:
+
+<p align="center">
+  <strong>Interface de Terminal (Textual)</strong><br>
+  <img width="800" alt="Captura de tela TUI" src="https://github.com/user-attachments/assets/4dc3e461-bc15-4e89-bb71-c3f0c1ea2d09">
+  <br><br><br> <strong>Interface Gráfica (Flet)</strong><br>
+  <img width="800" alt="Captura de tela GUI" src="https://github.com/user-attachments/assets/0378a6d1-9b2a-4a08-a668-e87d1c7d5a2b">
+</p>
+
+---
+
 ## 🎯 Objetivo do Projeto
 O objetivo principal é demonstrar na prática os conceitos estudados em Sistemas Operacionais, observando como o SO gerencia o processador, a memória física, processos em execução, armazenamento e recursos de hardware (como a GPU).
+
+---
 
 ## 🚀 As Duas Versões
 
@@ -28,15 +43,16 @@ Uma interface construída inteiramente no terminal utilizando o framework **Text
 ## 📊 Funcionalidades Implementadas
 
 Ambas as versões são capazes de monitorar em tempo real:
-*** CPU:** Porcentagem de uso global, separação entre núcleos físicos e lógicos.
-*** Memória RAM:** Capacidade total, memória em uso e porcentagem. Os dados são convertidos dinamicamente de Bytes para formatos legíveis (MB/GB).
-*** GPU (Placa de Vídeo):** Leitura de VRAM, porcentagem de estresse do chip gráfico e temperatura (requer hardware compatível).
-*** Energia e Disco:** Nível de bateria, status de conexão na tomada e uso da partição raiz (C: ou /).
-*** Processos:** Uma tabela interativa (Top 10 ou Top 15) que lista os processos do sistema operacional ordenados por quem mais consome memória RAM no momento.
+
+* **CPU:** Porcentagem de uso global, separação entre núcleos físicos e lógicos.
+* **Memória RAM:** Capacidade total, memória em uso e porcentagem. Os dados são convertidos dinamicamente de Bytes para formatos legíveis (MB/GB).
+* **GPU (Placa de Vídeo):** Leitura de VRAM, porcentagem de estresse do chip gráfico e temperatura (requer hardware compatível).
+* **Energia e Disco:** Nível de bateria, status de conexão na tomada e uso da partição raiz (`C:` ou `/`).
+* **Processos:** Uma tabela interativa (Top 10 ou Top 15) que lista os processos do sistema operacional ordenados por quem mais consome memória RAM no momento.
 
 ---
 
-##  Solução de Arquitetura (Prevenção de Gargalos)
+## ⚙️ Solução de Arquitetura (Prevenção de Gargalos)
 
 Ler dezenas de processos diretamente do Sistema Operacional é uma tarefa que exige muito do processador. Para evitar que a interface visual "engasgue" ou congele durante o uso, a arquitetura de atualização de dados foi separada em duas rotinas (Tempos de Tick):
 
@@ -45,7 +61,7 @@ Ler dezenas de processos diretamente do Sistema Operacional é uma tarefa que ex
 
 ---
 
-##  Como Executar o Projeto na sua Máquina
+## 🛠️ Como Executar o Projeto na sua Máquina
 
 ### Pré-requisitos
 * Python 3.8 ou superior.
@@ -53,23 +69,26 @@ Ler dezenas de processos diretamente do Sistema Operacional é uma tarefa que ex
 
 ### Passo a passo de Instalação
 
-1. Clone este repositório:
-   ```bash
-   git clone (https://github.com/filipesousa01/Sistemas-Operacionais.git)
-   cd monitor-sistema
+**1. Clone este repositório:**
+```bash
+git clone https://github.com/filipesousa01/Sistemas-Operacionais.git
+cd monitor-sistema
+```
+### 2. Crie e ative um ambiente virtual:
 
-Crie um ambiente virtual 
+No Windows:
 
-Windows:
+DOS
 python -m venv .venv
 .venv\Scripts\activate
 
-Linux/Mac:
+No Linux/Mac:
 
+Bash
 python3 -m venv .venv
 source .venv/bin/activate
 
-📚 Tecnologias Utilizadas:
+## 📚Tecnologias Utilizadas
 
 Python: Linguagem base.
 
